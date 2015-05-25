@@ -1,0 +1,12 @@
+<div class="col-md-12 view_container credits_list">
+    <div class="row">
+        <div>Punkte gesamt: {{totalCredits}}</div>
+        <div>Davon Bonuspunkte: {{totalBonusCredits}}</div>
+        <div class="list">
+            Bonuspunkthistorie
+            <div ng-repeat="bonusCredit in bonusCredits">
+                {{bonusCredit.credits}} Punkt am {{bonusCredit.date | dateToISO | date:"dd.MM.yyyy 'um' HH:mm"}}
+            </div>
+        </div>
+    </div>
+</div>

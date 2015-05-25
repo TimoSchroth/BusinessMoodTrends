@@ -1,0 +1,40 @@
+<div class="signup-box">
+    <div class="panel signup-panel panel-default">
+        <div class="panel-heading">
+            <div class="preloader preloader_title" ng-show="showPreloader"></div>
+            <h3 class="panel-title">Registrieren</h3>
+        </div>
+        <div class="panel-body">
+        <form accept-charset="UTF-8" role="form">
+            <fieldset>
+                <div class="form-group register_center {{mentorContainerClass}}">
+                    <img src="{{signupUser.imgUrl}}">
+                </div>
+                <div class="form-group register_center">
+                    <input ng-click="getRandomMentorImg()" class="btn btn-default" type="submit" value="Wähle einen Moody">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Benutzername" name="name" type="text" ng-model="signupUser.name">
+                </div>
+               <!--<div class="form-group">
+                    <select name="gender" class="form-control" ng-model="signupUser.gender">
+                      <option value="0">Geschlecht</option>
+                      <option value="m">Männlich</option>
+                      <option value="w">Weiblich</option>
+                    </select>
+                </div>   -->         
+                <div class="form-group">
+                    <input class="form-control" placeholder="Passwort" name="password" type="password" value="" ng-model="signupUser.password">
+                </div>            
+                <div class="form-group">
+                    <input class="form-control" placeholder="Passwort wiederholen" name="retype-password" type="password" value="" ng-model="signupUser.passwordRetype">
+                </div>
+                    <label>
+                            <a href="#/"> Anmelden </a>
+                    </label>
+                <input ng-click="doSignupUser()" class="btn btn-lg btn-success btn-block" type="submit" value="Registrieren">
+            </fieldset>
+        </form>
+        </div>
+    </div>
+</div>

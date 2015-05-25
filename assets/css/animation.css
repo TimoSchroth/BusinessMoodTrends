@@ -1,0 +1,176 @@
+.an-register {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.an-register.ng-enter { transform: translateY(25%); opacity: 0; transition-delay: 800ms; }
+.an-register.ng-enter-active { transform: translateY(0); opacity: 1; }
+
+.an-register.ng-leave { transform: translateY(0); opacity: 1; transition-delay: 0ms;}
+.an-register.ng-leave-active { transform: translateY(25%); opacity: 0; }
+
+
+.an-login {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.an-login.ng-enter { transform: translateY(25%); opacity: 0; transition-delay: 800ms; }
+.an-login.ng-enter-active { transform: translateY(0); opacity: 1; }
+
+.an-login.ng-leave { transform: translateY(0); opacity: 1; transition-delay: 0ms;}
+.an-login.ng-leave-active { transform: translateY(25%); opacity: 0; }
+
+.vote_container{
+
+}
+
+.voting_container .vote_element_button{
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+}
+
+.voting_container .mood_hover{   
+    float: none !important;
+    width: 120% !important;
+    font-size: 18px !important;
+    margin-top: -26%;
+    margin-left: -10%;
+}
+
+.voting_container .mood_hover div{
+    font-weight: bold;
+}
+
+
+/**************************SYSTEM***********************************************/
+
+
+/*******************************************************************************SHARED: Header***/
+.animate_page_elements .system_header_container {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.animate_page_elements .system_header_container.ng-hide-remove { top: -66px; opacity: 0; transition-delay: 800ms;}
+.animate_page_elements .system_header_container.ng-hide-remove-active { top: 0px; opacity: 1; }
+
+.animate_page_elements .system_header_container.ng-hide-add { top: 0px; opacity: 1; transition-delay: 400ms; }
+.animate_page_elements .system_header_container.ng-hide-add-active { top: -66px; opacity: 0; }
+/*******************************************************************************SHARED: Sidebar***/
+.animate_page_elements .system_sidebar_container {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.animate_page_elements .system_sidebar_container.ng-hide-remove { right: -260px; opacity: 0; transition-delay: 400ms; }
+.animate_page_elements .system_sidebar_container.ng-hide-remove-active { right: 0px; opacity: 1; }
+
+.animate_page_elements .system_sidebar_container.ng-hide-add { right: 0px; opacity: 1; transition-delay: 800ms;}
+.animate_page_elements .system_sidebar_container.ng-hide-add-active { right: -260px; opacity: 0; }
+/*******************************************************************************SHARED: Mentor Tooltip***/
+.animate_page_elements .system_mentor_tooltip_container {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.animate_page_elements .system_mentor_tooltip_container.ng-hide-remove { top: -66px; opacity: 0; transition-delay: 1200ms; }
+.animate_page_elements .system_mentor_tooltip_container.ng-hide-remove-active { top: 60px; opacity: 1; }
+
+.animate_page_elements .system_mentor_tooltip_container.ng-hide-add { top: 60px; opacity: 1; transition-delay: 0ms; }
+.animate_page_elements .system_mentor_tooltip_container.ng-hide-add-active { top: -66px; opacity: 0; }
+/*******************************************************************************SHARED: Mentor***/
+.animate_page_elements .system_mentor_container {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.animate_page_elements .system_mentor_container.ng-hide-remove { left: -266px; opacity: 0; transition-delay: 0ms; }
+.animate_page_elements .system_mentor_container.ng-hide-remove-active { left: 0px; opacity: 1; }
+
+.animate_page_elements .system_mentor_container.ng-hide-add { left: 0px; opacity: 1; transition-delay: 1200ms;}
+.animate_page_elements .system_mentor_container.ng-hide-add-active { left: -266px; opacity: 0; }
+/*******************************************************************************NG-VIEW***/
+.main-content {   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 500ms;
+  position: absolute;
+}
+
+.main-content.ng-enter { opacity: 0; transition-delay: 800ms; }
+.main-content.ng-enter-active { opacity: 1; }
+
+.main-content.ng-leave { opacity: 1; transition-delay: 0ms;}
+.main-content.ng-leave-active { opacity: 0; }
+
+/*******************************************************************************SHARED: Voting Directive***/
+.voting_vote_container,
+.voting_quote_container, 
+.voting_credit_container,
+.voting_smiley_container{   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 800ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 800ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 800ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 800ms;
+  width: 100%;
+  position: absolute;
+}
+
+.voting_vote_container.ng-hide-remove{ opacity: 0; transition-delay: 1600ms;}
+.voting_vote_container.ng-hide-remove-active{ opacity: 1; }
+
+.voting_vote_container.ng-hide-add { opacity: 1; transition-delay: 800ms; }
+.voting_vote_container.ng-hide-add-active { opacity: 0; }
+
+
+.voting_quote_container.ng-hide-remove,
+.voting_credit_container.ng-hide-remove,
+.voting_smiley_container.ng-hide-remove { top: 60px; opacity: 0; transition-delay: 1600ms;}
+.voting_quote_container.ng-hide-remove-active,
+.voting_credit_container.ng-hide-remove-active,
+.voting_smiley_container.ng-hide-remove-active { top: initial; opacity: 1; }
+
+.voting_quote_container.ng-hide-add,
+.voting_credit_container.ng-hide-add,
+.voting_smiley_container.ng-hide-add { opacity: 1; transition-delay: 1600ms; }
+.voting_quote_container.ng-hide-add-active,
+.voting_credit_container.ng-hide-add-active,
+.voting_smiley_container.ng-hide-add-active { opacity: 0; }
+
+.voting .voting_container .credit_container .credit_1, 
+.voting .voting_container .credit_container .credit_2{   
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1200ms;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1200ms;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1200ms;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1200ms;
+  position: absolute;
+  width: 100%;
+}
+
+.voting .voting_container .credit_container .credit_2.ng-hide-remove{ opacity: 0; transition-delay: 2800ms;}
+.voting .voting_container .credit_container .credit_2.ng-hide-remove-active{ opacity: 1; }
+
+.voting .voting_container .credit_container .credit_2.ng-hide-add { opacity: 1; transition-delay: 2800ms; }
+.voting .voting_container .credit_container .credit_2.ng-hide-add-active { opacity: 0; }

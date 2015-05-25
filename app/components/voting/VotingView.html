@@ -1,0 +1,35 @@
+<div class="col-md-12 voting">
+    <div class="row">
+        <div class="voting_container">
+            <voting-vote 
+                ng-init="votingActions.votingVote = true" 
+                ng-show="votingActions.votingVote"
+                id="voting-vote" 
+                class="voting_vote_container"
+            ></voting-vote>
+            <voting-quote 
+                ng-init="votingActions.votingQuote = hide" 
+                ng-show="votingActions.votingQuote"
+                quote-text="votingValues.votingQuote.text"
+                quote-author="votingValues.votingQuote.author"
+                id="voting-quote" 
+                class="voting_quote_container ng-hide"
+            ></voting-quote>
+            <voting-credit 
+                ng-init="votingActions.votingCredit = hide" 
+                ng-show="votingActions.votingCredit"
+                credit-1="votingValues.votingCredit.credit1"
+                credit-2="votingValues.votingCredit.credit2"
+                id="voting-credit" 
+                class="voting_credit_container ng-hide"
+            ></voting-credit>
+            <voting-smiley 
+                ng-init="votingActions.votingSmiley = hide" 
+                ng-show="votingActions.votingSmiley"
+                smiley-image-url="votingValues.votingSmiley.url"
+                id="voting-smiley" 
+                class="voting_smiley_container ng-hide"
+            ></voting-smiley>
+        </div>
+    </div>
+</div>

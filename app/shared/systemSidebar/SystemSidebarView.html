@@ -1,0 +1,29 @@
+<div class="slide_down" ng-class="{'slide_up': active == true}">
+    <div class="sidebar_slide_up_container">
+        <div class="sidebar_slide_up_button" ng-click="slideUp()">
+            Ranking
+        </div>
+    </div>
+    <div class="col-md-2 sidebar alpha_background">
+        <div class="sidebar_credits_headline">Punkte</div>
+        <div class="sidebar_total_credits">{{totalCredits}}</div>
+        <div class="sidebar_divider"></div>
+        <div class="sidebar_ranking_headline">Platzierungen</div>
+        <div class="sidebar_ranking_container">
+            <div class="ranking_pos_container" ng-repeat="user in userRanking | orderBy:'credits':true">
+                <div class="ranking_pos">
+                    {{$index + 1}}
+                </div>
+                <div class="ranking_img">
+                    <img src={{baseImgMentors}}{{user.image}}>
+                </div>
+                <div class="ranking_username">
+                    {{user.username}}
+                </div>
+                <div class="ranking_credits">
+                    {{user.credits}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

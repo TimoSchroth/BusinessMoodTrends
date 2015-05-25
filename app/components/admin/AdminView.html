@@ -1,0 +1,38 @@
+<div class="col-md-12 dashboard admin">
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="info_line1_element bmt_chart">
+                <div class="btn-group select_statistic">
+                    <input type="text" style="display: none;" class="form-control" ng-change="statisticSelectedDay()" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="{{dt}}" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Schließen" />
+                    <label class="btn btn-primary" ng-model="radioModel" btn-radio="'day'" ng-click="open($event)">
+                      <i class="glyphicon glyphicon-calendar"></i>
+                    </label>
+                    <label class="btn btn-primary" ng-model="radioModel" ng-click="statisticWeekRange(-1, 'today')" btn-radio="'thisWeek'">Letzte Woche</label>
+                    <label class="btn btn-primary" ng-model="radioModel" ng-click="statisticWeekRange(6, 0)" btn-radio="'lastWeek'">Vorletzte Woche</label>
+                </div>
+                <div class="chart_msg">
+                    {{chartMsg}}
+                </div>
+                <nvd3-line-chart
+                            data="chartData"
+                            id="exampleId"
+                            showXAxis="true"
+                            showYAxis="true"
+                            showLegend="true"
+                            useInteractiveGuideLine="true"
+                            tooltips="true"
+                            interactive="true"
+                            forcey="[3, -3]"
+                            callback="callbackFunction()"
+                            yAxisTickFormat="yAxisTickFormatFunction()"
+                            xAxisTickFormat="xAxisTickFormatFunction()"
+                            xAxisTickValues="xAxisTickValuesFunction()"
+                            margin="{left:70,top:20,bottom:90,right:20}"
+                            class="chart"
+                            >
+                </nvd3-line-chart>
+            </div>
+        </div>
+    </div>
+</div>

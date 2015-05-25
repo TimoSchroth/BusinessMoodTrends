@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="bmtApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/favicon.png">
+
+        <title>BMT</title>
+        
+        <!-- JS -->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="./assets/libs/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-cookies.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-sanitize.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+        <script type="text/javascript" src="./assets/libs/ui-bootstrap-tpls-0.12.0.min.js"></script>
+        
+        <!-- d3 charts -->
+        <script type="text/javascript" src="./assets/libs/d3.v2.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./assets/libs/nv.d3.js"></script>
+        <script type="text/javascript" src="./assets/libs/moment.js"></script>
+        <script type="text/javascript" src="./assets/libs/angularjs-nvd3-directives.js"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- BMT Styles -->
+        <link href="./assets/css/style.css" rel="stylesheet">
+        <link href="./assets/css/animation.css" rel="stylesheet">
+        <!-- d3 charts Styles -->
+        <link href="./assets/css/nv.d3.css" rel="stylesheet">
+        
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,800italic,700,300,800' rel='stylesheet' type='text/css'>
+    </head>
+    
+    <body class="{{animationClassElements}}">
+        <div ng-controller="AlertsController" class="alert_container">
+          <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+        </div>
+        <system-sidebar ng-init="showSidebar = false" ng-show="showSidebar" id="system-sidebar" class="system_sidebar_container ng-hide"></system-sidebar>
+        <system-header ng-init="showHeader = false" ng-show="showHeader" id="system-header" class="system_header_container ng-hide"></system-header>
+        <system-mentor-tooltip ng-init="showMentorTooltip = false" ng-show="showMentorTooltip" id="system-mentor-tooltip" class="system_mentor_tooltip_container ng-hide"></system-mentor-tooltip>
+        <div class="main-content {{animationClass}} {{contentClass}}" ng-view></div>
+        <system-mentor ng-init="showMentor = false" ng-show="showMentor" id="system-mentor" class="system_mentor_container ng-hide"></system-mentor>
+    </body>
+</html>
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/app.http.js"></script>
+<script type="text/javascript" src="app/app.route.js"></script>
+<script type="text/javascript" src="app/app.constants.js"></script>
+<script type="text/javascript" src="app/app.filter.js"></script>
+<script type="text/javascript" src="app/shared/alerts/AlertsController.js"></script>
+<script type="text/javascript" src="app/shared/alerts/AlertsService.js"></script>
+<script type="text/javascript" src="app/components/login/LoginController.js"></script>
+<script type="text/javascript" src="app/components/login/LoginService.js"></script>
+<script type="text/javascript" src="app/components/signup/SignupController.js"></script>
+<script type="text/javascript" src="app/components/signup/SignupService.js"></script>
+<script type="text/javascript" src="app/shared/systemSidebar/SystemSidebarDirective.js"></script>
+<script type="text/javascript" src="app/shared/systemSidebar/SystemSidebarService.js"></script>
+<script type="text/javascript" src="app/shared/systemHeader/SystemHeaderDirective.js"></script>
+<script type="text/javascript" src="app/shared/systemHeader/SystemHeaderService.js"></script>
+<script type="text/javascript" src="app/shared/systemMentorTooltip/SystemMentorTooltipDirective.js"></script>
+<script type="text/javascript" src="app/shared/systemMentorTooltip/SystemMentorTooltipService.js"></script>
+<script type="text/javascript" src="app/shared/systemMentor/SystemMentorDirective.js"></script>
+<script type="text/javascript" src="app/shared/systemMentor/SystemMentorService.js"></script>
+<script type="text/javascript" src="app/shared/votingVote/VotingVoteDirective.js"></script>
+<script type="text/javascript" src="app/shared/votingVote/VotingVoteService.js"></script>
+<script type="text/javascript" src="app/shared/votingQuote/VotingQuoteDirective.js"></script>
+<script type="text/javascript" src="app/shared/votingQuote/VotingQuoteService.js"></script>
+<script type="text/javascript" src="app/shared/votingSmiley/VotingSmileyDirective.js"></script>
+<script type="text/javascript" src="app/shared/votingSmiley/VotingSmileyService.js"></script>
+<script type="text/javascript" src="app/shared/votingCredit/VotingCreditDirective.js"></script>
+<script type="text/javascript" src="app/shared/votingCredit/VotingCreditService.js"></script>
+<script type="text/javascript" src="app/components/dashboard/DashboardController.js"></script>
+<script type="text/javascript" src="app/components/dashboard/DashboardService.js"></script>
+<script type="text/javascript" src="app/components/voting/VotingController.js"></script>
+<script type="text/javascript" src="app/components/voting/VotingService.js"></script>
+<script type="text/javascript" src="app/components/quoteList/QuoteListController.js"></script>
+<script type="text/javascript" src="app/components/quoteList/QuoteListService.js"></script>
+<script type="text/javascript" src="app/components/smileyList/SmileyListController.js"></script>
+<script type="text/javascript" src="app/components/smileyList/SmileyListService.js"></script>
+<script type="text/javascript" src="app/components/creditsList/CreditsListController.js"></script>
+<script type="text/javascript" src="app/components/creditsList/CreditsListService.js"></script>
+<script type="text/javascript" src="app/components/admin/AdminController.js"></script>
+<script type="text/javascript" src="app/components/admin/AdminService.js"></script>
+<script type="text/javascript" src="app/shared/firebase/FirebaseService.js"></script>

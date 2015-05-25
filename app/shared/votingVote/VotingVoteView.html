@@ -1,0 +1,19 @@
+<div ng-switch on="voteContent">
+    <div ng-switch-when="vote">
+        <div class="voting_label_container">
+            <div class="label_bad">{{voting.labelBad}}</div>
+            <div class="label_count_vote">{{voting.totalVotesToday}} {{voting.dateToday | date:'dd.MM.yyyy'}}</div>
+            <div class="label_good">{{voting.labelGood}}</div>
+        </div>
+        <div class="mood_line"></div>
+        <div class="vote_element {{mood.class}}" ng-repeat="mood in moods" ng-click="vote(mood.moodValue)">
+            <div class="vote_element_button" ng-class="{mood_hover: mood_hover}" ng-mouseenter="mood_hover = true" ng-mouseleave="mood_hover = false" >
+                <img ng-src="{{moodBaseUrl}}mood_{{mood.moodValue}}.png">
+                <div class="vote_name">{{mood.name}}</div>
+            </div>
+        </div>
+    </div>
+    <div ng-switch-when="dayGoal">
+        <div class="day_goal">{{dayGoal}}</div>
+    </div>    
+</div>
